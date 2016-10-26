@@ -9,14 +9,14 @@ $(document).ready(function(){
 		$('h1').append(subHeader);
 	}
 
-	
+	addSubHeader();
 
 
 	// the form redirects when it should just update the count of "E"s
 	$('form').on('submit', function(e){
 		console.log('form submitted');
 		var input = $('input').eq(0).val();
-
+		e.preventDefault();
 		// should count occurrences of the letter "E"
 		// and update the display. instead always shows 0
 		for (var i = 0; i < 10; i++){
@@ -25,6 +25,7 @@ $(document).ready(function(){
 			if (input[i] === "e"){
 				count = count +1;
 			}
+			console.log(count);
 			$('#num-es').text(count);
 		}
 	});
@@ -45,4 +46,4 @@ $(document).ready(function(){
     }
 
     addLinks();
-};
+});
