@@ -20,7 +20,7 @@ $(document).ready(function(){
 		// should count occurrences of the letter "E"
 		// and update the display. instead always shows 0
 		var count = 0;
-		for (var i = 0; i < 10; i++){
+		for (var i = 0; i < input.length; i++){
 			// this loop doesn't find both es in  "supercalifragilisticexpialidocious"
 
 			if (input[i] === "e"){
